@@ -1,0 +1,11 @@
+.header {
+    h1 {
+        font-size: var(--font-size-h1);
+    }
+}
+
+.headerLogo {
+    height: 48px;
+    vertical-align: middle;
+    width: 48px;
+}
