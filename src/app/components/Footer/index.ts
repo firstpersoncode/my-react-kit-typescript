@@ -1,2 +1,2 @@
-import FooterView from './view';
-export default FooterView;
+import FooterView from './view'
+export default FooterView

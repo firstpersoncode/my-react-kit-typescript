@@ -157,5 +157,5 @@ module.exports = {
         */
         // , externalModuleResolutionStrategy: 'node_modules'
     },
-};
+}
 // generated: dependency-cruiser@4.16.0 on 2019-04-28T13:33:22.188Z

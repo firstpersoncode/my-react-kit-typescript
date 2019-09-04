@@ -1,5 +1,5 @@
-import path from 'path';
-import { Response } from 'express';
+import path from 'path'
+import { Response } from 'express'
 
 const errorHandler = (err: Error, _req: any, res: Response, _next: any) =>
     res.status(404).json({
@@ -21,6 +21,6 @@ const errorHandler = (err: Error, _req: any, res: Response, _next: any) =>
                         '.'
                     )
                 ),
-    });
+    })
 
-export default errorHandler;
+export default errorHandler

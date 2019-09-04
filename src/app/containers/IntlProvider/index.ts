@@ -1,2 +1,2 @@
-import IntlProvider from './view';
-export default IntlProvider;
+import IntlProvider from './view'
+export default IntlProvider

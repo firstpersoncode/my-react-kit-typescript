@@ -7,5 +7,5 @@
 //     loading: Loading,
 //     timeout,
 // });
-import RouterStatusView from './view';
-export default RouterStatusView;
+import RouterStatusView from './view'
+export default RouterStatusView

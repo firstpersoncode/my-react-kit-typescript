@@ -1,4 +1,4 @@
-const paths = require('./utils/paths');
+const paths = require('./utils/paths')
 
 module.exports = {
     plugins: [
@@ -16,4 +16,4 @@ module.exports = {
         // require('postcss-normalize')(),
     ],
     sourceMap: true,
-};
+}

@@ -1,9 +1,9 @@
-import { connect } from 'react-redux';
-import { withTranslation } from 'react-i18next';
-import {{pascalCase componentName}} from './{{pascalCase componentName}}';
+import { connect } from 'react-redux'
+import { withTranslation } from 'react-i18next'
+import {{pascalCase componentName}} from './{{pascalCase componentName}}'
 
-const mapStateToProps = () => ({});
+const mapStateToProps = () => ({})
 
-const mapDispatchToProps = {};
+const mapDispatchToProps = {}
 
-export default connect(mapStateToProps, mapDispatchToProps)(withTranslation()({{pascalCase componentName}}));
+export default connect(mapStateToProps, mapDispatchToProps)(withTranslation()({{pascalCase componentName}}))

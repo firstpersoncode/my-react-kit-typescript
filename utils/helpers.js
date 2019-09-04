@@ -1,4 +1,4 @@
-const chalk = require('chalk');
+const chalk = require('chalk')
 
 const logMessage = (message, level = 'info') => {
     const color =
@@ -8,32 +8,32 @@ const logMessage = (message, level = 'info') => {
             ? 'yellow'
             : level === 'info'
             ? 'blue'
-            : 'white';
+            : 'white'
     // eslint-disable-next-line security/detect-object-injection
-    console.log(`[${new Date().toISOString()}]`, chalk[color](message));
-};
+    console.log(`[${new Date().toISOString()}]`, chalk[color](message))
+}
 
 const compilerPromise = (name, compiler) => {
     return new Promise((resolve, reject) => {
         compiler.hooks.compile.tap(name, () => {
-            logMessage(`[${name}] Compiling `);
-        });
+            logMessage(`[${name}] Compiling `)
+        })
         compiler.hooks.done.tap(name, (stats) => {
             if (!stats.hasErrors()) {
-                return resolve();
+                return resolve()
             }
-            return reject(`Failed to compile ${name}`);
-        });
-    });
-};
+            return reject(`Failed to compile ${name}`)
+        })
+    })
+}
 
-const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 
-const clientOnly = () => process.argv.includes('--client-only');
+const clientOnly = () => process.argv.includes('--client-only')
 
 module.exports = {
     clientOnly,
     compilerPromise,
     logMessage,
     sleep,
-};
+}

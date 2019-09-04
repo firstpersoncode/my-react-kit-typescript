@@ -1,4 +1,4 @@
-const paths = require('./utils/paths');
+const paths = require('./utils/paths')
 
 module.exports = {
     extends: ['wiremore', 'wiremore/react', 'wiremore/typescript'],
@@ -21,6 +21,7 @@ module.exports = {
         'import/no-unassigned-import': 0,
         'import/no-named-as-default-member': 0,
         'prettier/prettier': 'error',
+        'semi': 0,
     },
     overrides: [
         {
@@ -32,4 +33,4 @@ module.exports = {
             },
         },
     ],
-};
+}

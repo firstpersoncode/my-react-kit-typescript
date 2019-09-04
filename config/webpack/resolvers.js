@@ -1,4 +1,4 @@
-const paths = require('../../utils/paths');
+const paths = require('../../utils/paths')
 
 module.exports = {
     extensions: ['.js', '.mjs', '.json', '.jsx', '.ts', '.tsx', '.css'],
@@ -14,4 +14,4 @@ module.exports = {
         'react-i18next': require.resolve('react-i18next'),
         'i18next': require.resolve('i18next'),
     },
-};
+}

@@ -1,4 +1,4 @@
-import * as express from 'express';
+import * as express from 'express'
 
 // This middleware is useful in cases when you want to add webhooks that
 // call certain endpoints in your server side build. Add a WEBHOOK_TOKEN
@@ -10,10 +10,10 @@ const webhookVerification = (
     next: express.NextFunction
 ) => {
     if (req.query.webhookToken !== process.env.WEBHOOK_TOKEN) {
-        return res.sendStatus(403);
+        return res.sendStatus(403)
     }
 
-    return next();
-};
+    return next()
+}
 
-export default webhookVerification;
+export default webhookVerification

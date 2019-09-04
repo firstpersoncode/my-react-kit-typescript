@@ -1,15 +1,15 @@
-const path = require('path');
-const webpack = require('webpack');
-const ManifestPlugin = require('webpack-manifest-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
+const path = require('path')
+const webpack = require('webpack')
+const ManifestPlugin = require('webpack-manifest-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
-const paths = require('../../utils/paths');
-const { clientOnly } = require('../../utils/helpers');
+const paths = require('../../utils/paths')
+const { clientOnly } = require('../../utils/helpers')
 
-const env = require('../env')();
+const env = require('../env')()
 
 const shared = [
     new MiniCssExtractPlugin({
@@ -18,7 +18,7 @@ const shared = [
         chunkFilename:
             process.env.NODE_ENV === 'development' ? '[id].css' : '[id].[contenthash].css',
     }),
-];
+]
 
 const client = [
     clientOnly() &&
@@ -36,7 +36,7 @@ const client = [
     }),
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
     new ManifestPlugin({ fileName: 'manifest.json' }),
-].filter(Boolean);
+].filter(Boolean)
 
 const server = [
     new webpack.DefinePlugin({
@@ -53,10 +53,10 @@ const server = [
             ignore: '*.missing.json',
         },
     ]),
-];
+]
 
 module.exports = {
     shared,
     client,
     server,
-};
+}

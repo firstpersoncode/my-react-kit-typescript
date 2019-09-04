@@ -1,2 +1,2 @@
-import FeaturesView from './view';
-export default FeaturesView;
+import FeaturesView from './view'
+export default FeaturesView

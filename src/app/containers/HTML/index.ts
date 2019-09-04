@@ -1,2 +1,2 @@
-import HTMLView from './view';
-export default HTMLView;
+import HTMLView from './view'
+export default HTMLView

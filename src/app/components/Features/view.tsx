@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react';
-import css from './style.module.css';
+import React, { Fragment } from 'react'
+import css from './style.module.css'
 
 const FeaturesView = (props) => {
-    const { t } = props;
+    const { t } = props
     return (
         <Fragment>
             <h2>{t('features')}</h2>
@@ -27,7 +27,7 @@ const FeaturesView = (props) => {
                 <li>HMR</li>
             </ul>
         </Fragment>
-    );
-};
+    )
+}
 
-export default FeaturesView;
+export default FeaturesView

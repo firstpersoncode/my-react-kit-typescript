@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { Component } from 'react'
+import { Helmet } from 'react-helmet-async'
 
-import RouterStatus from '../../components/RouterStatus';
+import RouterStatus from '../../components/RouterStatus'
 
 class NotFoundView extends Component {
     render() {
@@ -12,8 +12,8 @@ class NotFoundView extends Component {
                 </Helmet>
                 page not found ...
             </RouterStatus>
-        );
+        )
     }
 }
 
-export default NotFoundView;
+export default NotFoundView

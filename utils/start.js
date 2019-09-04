@@ -1,13 +1,13 @@
-const rimraf = require('rimraf');
+const rimraf = require('rimraf')
 
-const paths = require('../utils/paths');
-const { clientOnly } = require('./helpers');
+const paths = require('./paths')
+const { clientOnly } = require('./helpers')
 
-rimraf.sync(paths.BUILD_CLIENT);
-rimraf.sync(paths.BUILD_SERVER);
+rimraf.sync(paths.BUILD_CLIENT)
+rimraf.sync(paths.BUILD_SERVER)
 
 if (clientOnly()) {
-    require('./start-client');
+    require('./start-client')
 } else {
-    require('./start-ssr');
+    require('./start-ssr')
 }

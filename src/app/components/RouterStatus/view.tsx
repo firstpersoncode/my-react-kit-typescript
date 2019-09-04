@@ -1,15 +1,15 @@
-import React from 'react';
-import { Route } from 'react-router';
+import React from 'react'
+import { Route } from 'react-router'
 
 const RouterStatusView = ({ code, children }) => (
     <Route
         render={({ staticContext }) => {
             if (staticContext) {
-                staticContext.status = code;
+                staticContext.status = code
             }
-            return children;
+            return children
         }}
     />
-);
+)
 
-export default RouterStatusView;
+export default RouterStatusView

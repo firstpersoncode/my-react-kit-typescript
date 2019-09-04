@@ -1,14 +1,14 @@
-import React, { useCallback } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { renderRoutes } from 'react-router-config';
+import React, { useCallback } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { renderRoutes } from 'react-router-config'
 
-import pages from '../../pages';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import pages from '../../pages'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 
-import favicon from './assets/favicon.png';
+import favicon from './assets/favicon.png'
 
-import css from './style.module.css';
+import css from './style.module.css'
 
 const CoreLayoutView: React.FC<any> = () => {
     return (
@@ -22,7 +22,7 @@ const CoreLayoutView: React.FC<any> = () => {
             {renderRoutes(pages)}
             <Footer />
         </div>
-    );
-};
+    )
+}
 
-export default CoreLayoutView;
+export default CoreLayoutView

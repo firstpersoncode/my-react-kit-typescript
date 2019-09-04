@@ -1,7 +1,7 @@
-const { clientOnly } = require('./helpers');
+const { clientOnly } = require('./helpers')
 
 if (clientOnly()) {
-    require('./build-client');
+    require('./build-client')
 } else {
-    require('./build-ssr');
+    require('./build-ssr')
 }

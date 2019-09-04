@@ -1,13 +1,13 @@
-const path = require('path');
-const TerserPlugin = require('terser-webpack-plugin');
+const path = require('path')
+const TerserPlugin = require('terser-webpack-plugin')
 
-const paths = require('../../utils/paths');
+const paths = require('../../utils/paths')
 
-const { client: clientLoaders } = require('./loaders');
-const resolvers = require('./resolvers');
-const plugins = require('./plugins');
+const { client: clientLoaders } = require('./loaders')
+const resolvers = require('./resolvers')
+const plugins = require('./plugins')
 
-const generateSourceMap = process.env.OMIT_SOURCEMAP === 'true' ? false : true;
+const generateSourceMap = process.env.OMIT_SOURCEMAP === 'true' ? false : true
 
 module.exports = {
     name: 'client',
@@ -108,4 +108,4 @@ module.exports = {
         timings: true,
         version: false,
     },
-};
+}

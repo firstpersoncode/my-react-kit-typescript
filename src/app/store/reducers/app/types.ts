@@ -1,10 +1,10 @@
-export type Locale = 'en_US' | 'de_DE';
+export type Locale = 'en_US' | 'de_DE'
 
 export type AppState = Readonly<{
-    locale: Locale;
-}>;
+    locale: Locale
+}>
 
 export type Action = {
-    type: string;
-    payload: any;
-};
+    type: string
+    payload: any
+}

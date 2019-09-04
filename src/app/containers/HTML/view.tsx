@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react'
 
 type Props = {
-    children: any;
-    css: string[];
-    helmetContext: any;
-    scripts: string[];
-    state: string;
-};
+    children: any
+    css: string[]
+    helmetContext: any
+    scripts: string[]
+    state: string
+}
 
 const HTMLView = ({
     children,
@@ -44,6 +44,6 @@ const HTMLView = ({
             ))}
         </body>
     </html>
-);
+)
 
-export default HTMLView;
+export default HTMLView

@@ -1,11 +1,11 @@
-const path = require('path');
-const nodeExternals = require('webpack-node-externals');
+const path = require('path')
+const nodeExternals = require('webpack-node-externals')
 
-const paths = require('../../utils/paths');
+const paths = require('../../utils/paths')
 
-const { server: serverLoaders } = require('./loaders');
-const resolvers = require('./resolvers');
-const plugins = require('./plugins');
+const { server: serverLoaders } = require('./loaders')
+const resolvers = require('./resolvers')
+const plugins = require('./plugins')
 
 module.exports = {
     name: 'server',
@@ -54,4 +54,4 @@ module.exports = {
     node: {
         __dirname: false,
     },
-};
+}

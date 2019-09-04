@@ -1,2 +1,2 @@
-import CoreLayoutView from './view';
-export default CoreLayoutView;
+import CoreLayoutView from './view'
+export default CoreLayoutView

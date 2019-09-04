@@ -1,2 +1,2 @@
 // urls
-export const HOME_PATH: string = '/';
+export const HOME_PATH: string = '/'

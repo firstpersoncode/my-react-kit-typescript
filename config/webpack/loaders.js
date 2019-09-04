@@ -1,19 +1,19 @@
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent')
 
-const generateSourceMap = process.env.OMIT_SOURCEMAP === 'true' ? false : true;
+const generateSourceMap = process.env.OMIT_SOURCEMAP === 'true' ? false : true
 
-const cssRegex = /\.css$/;
-const cssModuleRegex = /\.module\.css$/;
+const cssRegex = /\.css$/
+const cssModuleRegex = /\.module\.css$/
 
 // temporary wrapper function around getCSSModuleLocalIdent until this issue is resolved:
 // https://github.com/webpack-contrib/css-loader/pull/965
 const getLocalIdentWorkaround = (context, localIdentName, localName, options) => {
     if (options && options.context === null) {
-        options.context = undefined;
+        options.context = undefined
     }
-    return getCSSModuleLocalIdent(context, localIdentName, localName, options);
-};
+    return getCSSModuleLocalIdent(context, localIdentName, localName, options)
+}
 
 const babelLoader = {
     test: /\.(js|jsx|ts|tsx|mjs)$/,
@@ -36,7 +36,7 @@ const babelLoader = {
         cacheCompression: process.env.NODE_ENV === 'production',
         compact: process.env.NODE_ENV === 'production',
     },
-};
+}
 
 const cssModuleLoaderClient = {
     test: cssModuleRegex,
@@ -64,7 +64,7 @@ const cssModuleLoaderClient = {
             },
         },
     ],
-};
+}
 
 const cssLoaderClient = {
     test: cssRegex,
@@ -80,7 +80,7 @@ const cssLoaderClient = {
             },
         },
     ],
-};
+}
 
 const cssModuleLoaderServer = {
     test: cssModuleRegex,
@@ -104,13 +104,13 @@ const cssModuleLoaderServer = {
             },
         },
     ],
-};
+}
 
 const cssLoaderServer = {
     test: cssRegex,
     exclude: cssModuleRegex,
     use: [MiniCssExtractPlugin.loader, require.resolve('css-loader')],
-};
+}
 
 const urlLoaderClient = {
     test: /\.(png|jpe?g|gif|svg)$/,
@@ -119,7 +119,7 @@ const urlLoaderClient = {
         limit: 2048,
         name: 'assets/[name].[hash:8].[ext]',
     },
-};
+}
 
 const urlLoaderServer = {
     ...urlLoaderClient,
@@ -127,7 +127,7 @@ const urlLoaderServer = {
         ...urlLoaderClient.options,
         emitFile: false,
     },
-};
+}
 
 const fileLoaderClient = {
     exclude: [/\.(js|jsx|ts|tsx|css|mjs|html|ejs|json)$/],
@@ -139,7 +139,7 @@ const fileLoaderClient = {
             },
         },
     ],
-};
+}
 
 const fileLoaderServer = {
     exclude: [/\.(js|tsx|ts|tsx|css|mjs|html|ejs|json)$/],
@@ -152,7 +152,7 @@ const fileLoaderServer = {
             },
         },
     ],
-};
+}
 
 const client = [
     {
@@ -164,7 +164,7 @@ const client = [
             fileLoaderClient,
         ],
     },
-];
+]
 const server = [
     {
         oneOf: [
@@ -175,9 +175,9 @@ const server = [
             fileLoaderServer,
         ],
     },
-];
+]
 
 module.exports = {
     client,
     server,
-};
+}

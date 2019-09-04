@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-import Features from '../../components/Features';
+import Features from '../../components/Features'
 
-import css from './style.module.css';
+import css from './style.module.css'
 
 class HomeView extends Component {
     handleLocaleChange = (e: React.FormEvent<HTMLButtonElement>) => {
-        const { setLocale } = this.props;
-        setLocale(e.currentTarget.value);
-    };
+        const { setLocale } = this.props
+        setLocale(e.currentTarget.value)
+    }
 
     render() {
-        const { t, location } = this.props;
+        const { t, location } = this.props
         return (
             <div className={css.wrapper}>
                 Welcome Home.. path: {location.pathname}
@@ -27,8 +27,8 @@ class HomeView extends Component {
                     </button>
                 </p>
             </div>
-        );
+        )
     }
 }
 
-export default HomeView;
+export default HomeView

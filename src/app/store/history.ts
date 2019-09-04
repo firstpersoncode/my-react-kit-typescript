@@ -1,18 +1,18 @@
-import { createMemoryHistory, createBrowserHistory } from 'history';
+import { createMemoryHistory, createBrowserHistory } from 'history'
 
 type HistoryParams = {
-    initialEntries?: any[];
-};
+    initialEntries?: any[]
+}
 
 export const createUniversalHistory = ({ initialEntries = [] }: HistoryParams = {}) => {
     if (__BROWSER__) {
-        const history = window.browserHistory || createBrowserHistory();
+        const history = window.browserHistory || createBrowserHistory()
         if (process.env.NODE_ENV === 'development' && !window.browserHistory) {
-            window.browserHistory = history;
+            window.browserHistory = history
         }
-        return history;
+        return history
     }
-    return createMemoryHistory({ initialEntries });
-};
+    return createMemoryHistory({ initialEntries })
+}
 
-export default createUniversalHistory;
+export default createUniversalHistory

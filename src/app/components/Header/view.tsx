@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
-import css from './style.module.css';
-import { ReactComponent as ReactLogo } from './assets/react.svg';
+import css from './style.module.css'
+import { ReactComponent as ReactLogo } from './assets/react.svg'
 
 const HeaderView: React.FC<any> = () => {
     return (
@@ -11,7 +11,7 @@ const HeaderView: React.FC<any> = () => {
                 Edition
             </h1>
         </header>
-    );
-};
+    )
+}
 
-export default HeaderView;
+export default HeaderView

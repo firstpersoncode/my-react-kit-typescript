@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-import css from './style.module.css';
+import css from './style.module.css'
 
 const FooterView: React.FC<any> = () => {
-    return <footer className={css.footer}>build with love</footer>;
-};
+    return <footer className={css.footer}>build with love</footer>
+}
 
-export default FooterView;
+export default FooterView

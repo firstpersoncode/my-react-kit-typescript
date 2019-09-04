@@ -1,7 +1,7 @@
-const webpack = require('webpack');
-const WriteFileWebpackPlugin = require('write-file-webpack-plugin');
+const webpack = require('webpack')
+const WriteFileWebpackPlugin = require('write-file-webpack-plugin')
 
-const baseConfig = require('./server.base');
+const baseConfig = require('./server.base')
 
 const config = {
     ...baseConfig,
@@ -14,6 +14,6 @@ const config = {
     performance: {
         hints: false,
     },
-};
+}
 
-module.exports = config;
+module.exports = config

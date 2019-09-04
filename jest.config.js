@@ -1,4 +1,4 @@
-const paths = require('./utils/paths');
+const paths = require('./utils/paths')
 
 module.exports = {
     verbose: true,
@@ -25,4 +25,4 @@ module.exports = {
     transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx|mjs)$'],
     moduleDirectories: paths.resolveModules,
     moduleFileExtensions: ['js', 'json', 'jsx', 'node', 'mjs', 'ts', 'tsx'],
-};
+}

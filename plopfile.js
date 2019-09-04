@@ -1,8 +1,8 @@
-const prettier = require('prettier');
+const prettier = require('prettier')
 
 module.exports = (plop) => {
-    const prettierConfig = prettier.resolveConfig.sync(__dirname);
-    plop.load('plop-prettier', prettierConfig);
+    const prettierConfig = prettier.resolveConfig.sync(__dirname)
+    plop.load('plop-prettier', prettierConfig)
 
     plop.setGenerator('React Component', {
         description: 'Create a new React component',
@@ -33,25 +33,25 @@ module.exports = (plop) => {
                         './src/app/components/{{properCase componentName}}/{{properCase componentName}}.test.tsx',
                     templateFile: './config/plop/component/component.test.js.plop',
                 },
-            ];
+            ]
 
             if (answers.connectToRedux) {
                 actions.push({
                     type: 'pretty-add',
                     path: './src/app/components/{{properCase componentName}}/index.ts',
                     templateFile: './config/plop/component/index.connected.js.plop',
-                });
+                })
             } else {
                 actions.push({
                     type: 'pretty-add',
                     path: './src/app/components/{{properCase componentName}}/index.ts',
                     templateFile: './config/plop/component/index.unconnected.js.plop',
-                });
+                })
             }
 
-            return actions;
+            return actions
         },
-    });
+    })
 
     plop.setGenerator('Redux Reducer', {
         description: 'Generate a new Redux reducer (reducer, actions, selectors …)',
@@ -99,9 +99,9 @@ module.exports = (plop) => {
                     path: './src/app/store/{{camelCase reducerName}}/types.ts',
                     templateFile: './config/plop/reducer/types.js.plop',
                 },
-            ];
+            ]
 
-            return actions;
+            return actions
         },
-    });
-};
+    })
+}
