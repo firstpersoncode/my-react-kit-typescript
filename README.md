@@ -10,35 +10,6 @@ _Inspired by [manuelbieh's react-ssr-setup](https://github.com/manuelbieh/react-
 [![CircleCI](https://circleci.com/gh/manuelbieh/react-ssr-setup/tree/master.svg?style=svg)](https://circleci.com/gh/manuelbieh/react-ssr-setup/tree/master)
 -->
 
-## Features:
-
--   General Setup
-    -   🔥 Babel 7
-    -   📦 Webpack Generator `config/webpack/index.js`
-    -   🔥 ESLint 5 (with a set of custom rules which may be mostly identical to AirBnB with some personal flavor added)
-    -   🔥 TypeScript (via Babel)
-    -   🔥 Prettier
-    -   🔥 Jest 24
-    -   🐐 React Testing Library
-    -   ✅ React i18next for multi language support
-    -   ✅ Server Side Rendering with Express
-    -   ✅ Hot Module Reloading (HMR)
-    -   ✅ CSS Modules
-    -   ✅ PostCSS
-    -   ✅ Precommit hooks via lint-staged + Husky
-    -   ✅ Optional static deployment without the need for Node.js on the server
-    -   📕 Support for [Storybook](https://storybook.js.org/) (>= 5.0.0)
-
-*   Libs and Dependencies - ✅ React i18next for multi language support
-    -   ✅ My Webpack Generator
-    -   ⚛ React 16.x (latest), with Hooks!
-    -   ✅ Redux + Thunk middleware
-    -   ✅ Immer
-    -   ✅ Reselect
-    -   ✅ React Router 5
-    -   ✅ React Router Config
-    -   ✅ React Helmet
-
 ## Usage
 
 There are npm scripts for all the relevant things. The server will always be started on port 8500 unless otherwise specified in `process.env.PORT`. You can use a `.env` file to specify env vars. If you want to use them in your client side code, don't forget to add them in [config/env.js](config/env.js#L37).
@@ -85,6 +56,35 @@ Creates an image of your dependency graph. Requires [GraphVIZ](https://www.graph
 
 Run plop to create new React components or Redux reducers via CLI
 
+## Features:
+
+-   General Setup
+    -   🔥 Babel 7
+    -   📦 Webpack Generator `config/webpack/index.js`
+    -   🔥 ESLint 5 (with a set of custom rules which may be mostly identical to AirBnB with some personal flavor added)
+    -   🔥 TypeScript (via Babel)
+    -   🔥 Prettier
+    -   🔥 Jest 24
+    -   🐐 React Testing Library
+    -   ✅ React i18next for multi language support
+    -   ✅ Server Side Rendering with Express
+    -   ✅ Hot Module Reloading (HMR)
+    -   ✅ CSS Modules
+    -   ✅ PostCSS
+    -   ✅ Precommit hooks via lint-staged + Husky
+    -   ✅ Optional static deployment without the need for Node.js on the server
+    -   📕 Support for [Storybook](https://storybook.js.org/) (>= 5.0.0)
+
+*   Libs and Dependencies - ✅ React i18next for multi language support
+    -   ✅ My Webpack Generator
+    -   ⚛ React 16.x (latest), with Hooks!
+    -   ✅ Redux + Thunk middleware
+    -   ✅ Immer
+    -   ✅ Reselect
+    -   ✅ React Router 5
+    -   ✅ React Router Config
+    -   ✅ React Helmet
+
 ## Environment Variables
 
 There are a few environment variables you can set to adjust the setup to your needs
@@ -106,22 +106,6 @@ For the generation of the `index.html` the server side build gets started right 
 ### Component scaffolding using plop
 
 Along with this starter kit comes `plop` - a great command line tool to keep the structure of your Redux components and Redux reducers consistent. Run `yarn plop` (or `npm run plop`) to have components and Redux reducers created for you automatically! Just enter a name, answer a few questions and you're ready to go! You can of course adjust everything to your needs. All Plop templates can be found in the `config/plop` directory.
-
-### 📕 Storybook support
-
-I've successfully tested Storybook and it integrates seamlessly and without any issues into this setup. If you want to add Storybook to your project, install Storybook `^4.0.0` and run `getstorybook` to have the basic setup created for you. You must then replace all the content in `.storybook/webpack` with the following line:
-
-```js
-module.exports = require('../config/webpack/storybook')
-```
-
-Afterwards you should be able to run `yarn storybook` to start the Storybook Dev Server.
-
-More on that can be found on Github: [Syncing a fork](https://help.github.com/articles/syncing-a-fork/).
-
-### Avoid source map generation for faster builds
-
-In some cases you might not want to generate source maps for the generated files. In this case you can set the `OMIT_SOURCEMAP` environment variable to `true`. No source map files will be generated then. This works no matter if you're in devmode or building for production.
 
 ### Change the port of the dev environment
 
