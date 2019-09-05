@@ -14,7 +14,7 @@ class HomeView extends Component {
         const { t, location } = this.props
         return (
             <div className={css.wrapper}>
-                Welcome Home.. path: {location.pathname}
+                Welcome Home.. : {location.pathname}
                 <hr />
                 <Features t={t} />
                 <h2>{t('i18n-example')}</h2>

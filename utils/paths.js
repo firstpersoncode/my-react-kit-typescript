@@ -7,6 +7,7 @@ const resolveApp = (relativePath) => path.resolve(appDirectory, relativePath)
 
 const paths = {
     TEMPLATE_HTML: resolveApp('config/webpack/template.html'),
+    BUILD_: resolveApp('build'),
     BUILD_CLIENT: resolveApp('build/client'),
     BUILD_SERVER: resolveApp('build/server'),
     DOT_ENV: resolveApp('.env'),
@@ -16,7 +17,7 @@ const paths = {
     SRC_APP: resolveApp('src/app'),
     TYPES: resolveApp('node_modules/@types'),
     LOCALES: resolveApp('src/app/containers/IntlProvider/locales'),
-    PUBLIC_PATH: '/static/',
+    PUBLIC_PATH: '/',
 }
 
 paths.resolveModules = [
