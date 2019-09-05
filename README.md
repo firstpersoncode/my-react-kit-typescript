@@ -14,7 +14,7 @@ _Inspired by [manuelbieh's react-ssr-setup](https://github.com/manuelbieh/react-
 
 -   General Setup
     -   🔥 Babel 7
-    -   📦 Webpack 4
+    -   📦 Webpack Generator `config/webpack/index.js`
     -   🔥 ESLint 5 (with a set of custom rules which may be mostly identical to AirBnB with some personal flavor added)
     -   🔥 TypeScript (via Babel)
     -   🔥 Prettier
@@ -30,11 +30,13 @@ _Inspired by [manuelbieh's react-ssr-setup](https://github.com/manuelbieh/react-
     -   📕 Support for [Storybook](https://storybook.js.org/) (>= 5.0.0)
 
 *   Libs and Dependencies - ✅ React i18next for multi language support
+    -   ✅ My Webpack Generator
     -   ⚛ React 16.x (latest), with Hooks!
     -   ✅ Redux + Thunk middleware
     -   ✅ Immer
     -   ✅ Reselect
     -   ✅ React Router 5
+    -   ✅ React Router Config
     -   ✅ React Helmet
 
 ## Usage
@@ -71,9 +73,9 @@ Run Stylelint for all CSS files
 
 Run lint:js and lint:css in parallel
 
-#### `yarn analyze`
+<!-- #### `yarn analyze`
 
-Starts `webpack-bundle-analyzer` to give you the opportunity to analyze your bundle(s)
+Starts `webpack-bundle-analyzer` to give you the opportunity to analyze your bundle(s) -->
 
 #### `yarn depgraph`
 
@@ -95,11 +97,11 @@ There are a few environment variables you can set to adjust the setup to your ne
 
 ## Tricks
 
-### Client side version (opt-in)
+<!-- ### Client side version (opt-in)
 
 Beginning with v1.3.0, a **static** `index.html` is also generated and written to your `BUILD_CLIENT` directory. You are now able to deploy the `build/client` directory to a static webhost (such as Netlify or AWS S3) and serve your application from there!
 
-For the generation of the `index.html` the server side build gets started right after building, a headless Chrome then visits the site and writes the content of the server side response to your client directory. So you still need the `src/server` directory and the server side build but you're now flexible and can decide on your own whether you want to have the full server side experience or only deploy your completely static app somewhere.
+For the generation of the `index.html` the server side build gets started right after building, a headless Chrome then visits the site and writes the content of the server side response to your client directory. So you still need the `src/server` directory and the server side build but you're now flexible and can decide on your own whether you want to have the full server side experience or only deploy your completely static app somewhere. -->
 
 ### Component scaffolding using plop
 
@@ -110,7 +112,7 @@ Along with this starter kit comes `plop` - a great command line tool to keep the
 I've successfully tested Storybook and it integrates seamlessly and without any issues into this setup. If you want to add Storybook to your project, install Storybook `^4.0.0` and run `getstorybook` to have the basic setup created for you. You must then replace all the content in `.storybook/webpack` with the following line:
 
 ```js
-module.exports = require('../config/webpack/storybook');
+module.exports = require('../config/webpack/storybook')
 ```
 
 Afterwards you should be able to run `yarn storybook` to start the Storybook Dev Server.
@@ -182,6 +184,15 @@ You can just do it‬™. Really. Name your files `.js` instead of `.ts`/`.tsx` 
 -   [ ] Add proper [offline support using Workbox](https://webpack.js.org/guides/progressive-web-application/)
 -   [ ] Document i18n functionality (scan, pull, push, ...)
 -   [ ] Fine tuning different minor things (ongoing task) -->
+
+## Todo
+
+-   [x] `react-router-config` and routing config
+-   [x] `my-webpack-generator` for bundler
+-   [] create a separate module for server config
+-   [] `emotion`
+-   [] localize service
+-   [] bundle report service
 
 ## License
 
