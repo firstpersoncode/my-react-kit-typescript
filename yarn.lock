@@ -8133,10 +8133,10 @@ mute-stream@0.0.8:
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.8.tgz#1630c42b2251ff81e2a283de96a5497ea92e5e0d"
   integrity sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==
 
-my-webpack-generator@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/my-webpack-generator/-/my-webpack-generator-1.2.1.tgz#e1a819534a683f8bc7b86988021e96d3d1629f58"
-  integrity sha512-94Zf+ucHEp3u/3WrwAYidBJCXQPfhDWItzqsb7KBCxKM0epN4fZU0gDjP3IZBt1ptt8Q0ehDWnC2eTn51XBiZw==
+my-webpack-generator@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/my-webpack-generator/-/my-webpack-generator-1.2.2.tgz#764609cf0947facb8b8f438dd23b22c8f044c6a1"
+  integrity sha512-k9gMDMkn9dKrGuK+CoBZRPENzl0Xjno/bmiDRXjOVTqQZGRSul0n4qnMe826FnN/mMogFlMjGP8PD7P/B4ibtw==
   dependencies:
     "@babel/core" "^7.1.2"
     "@babel/polyfill" "^7.0.0"
